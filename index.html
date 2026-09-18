@@ -65,6 +65,22 @@
     .week-card { padding: 23px; border: 1px solid var(--line); border-radius: 22px; background: white; }
     .week-card .label { color: var(--coral-dark); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
     .week-card ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
+    .plan-stack { display: grid; gap: 18px; }
+    .plan-block { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: white; box-shadow: 0 8px 24px rgba(55,41,34,.03); }
+    .plan-block-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 20px 22px 15px; background: linear-gradient(90deg, var(--rose), #fff); }
+    .plan-block-head h3 { margin: 0; }
+    .plan-block-head span { color: var(--muted); font-size: 13px; }
+    .plan-scroll { overflow-x: auto; }
+    .plan-table { width: 100%; min-width: 930px; border-collapse: collapse; table-layout: fixed; }
+    .plan-table th, .plan-table td { padding: 12px 13px; border-top: 1px solid var(--line); border-right: 1px solid var(--line); vertical-align: top; text-align: left; }
+    .plan-table th:last-child, .plan-table td:last-child { border-right: 0; }
+    .plan-table thead th { color: var(--coral-dark); background: #fffaf8; font-size: 12px; font-weight: 800; }
+    .plan-table thead th:first-child { width: 132px; }
+    .plan-table tbody th { color: var(--ink); background: #fcfbfa; font-size: 12px; line-height: 1.3; }
+    .plan-table td { color: #50515a; font-size: 12px; line-height: 1.35; }
+    .plan-table td b { display: block; margin-bottom: 3px; color: var(--ink); font-size: 13px; }
+    .habit { color: #35634a !important; }
+    .habit:before { content: "↳ "; color: #69927a; }
     .do-not { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .do-not div { padding: 16px 18px; border: 1px solid #ecd3cd; border-radius: 16px; background: #fff5f2; color: #774940; }
     .sources { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px 28px; }
@@ -84,7 +100,7 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">#SEKTA · продуктовый research · 17 сентября 2026</div>
+      <div class="eyebrow">#SEKTA · продуктовый research · 18 сентября 2026</div>
       <h1>Зимняя сезонка:<br>как не выпадать из жизни</h1>
       <p class="lead">Актуальные темы и продуктовые подходы для трёхнедельного yearly-курса о российских реалиях зимы: темноте, холоде, влажности, гололёде и праздничной перегрузке.</p>
       <div class="hero-note"><b>Рабочая гипотеза:</b> не заставлять человека жить по летнему режиму, а дать ему зимнюю систему, в которой сохраняются энергия, форма и ощущение контроля.</div>
@@ -93,7 +109,7 @@
       <div class="stat"><b>3</b><span>недели курса</span></div><div class="stat"><b>4</b><span>контентных направления</span></div><div class="stat"><b>16</b><span>тем для проработки</span></div><div class="stat"><b>100%</b><span>evidence-first подход</span></div>
     </div>
     <nav class="nav" aria-label="Навигация">
-      <a href="#concept">Концепция</a><a href="#signals">Сигналы</a><a href="#ideas">Темы</a><a href="#structure">3 недели</a><a href="#avoid">Не брать</a><a href="#sources">Источники</a>
+      <a href="#concept">Концепция</a><a href="#signals">Сигналы</a><a href="#ideas">Темы</a><a href="#structure">Контентная сетка</a><a href="#avoid">Не брать</a><a href="#sources">Источники</a>
     </nav>
     <section id="concept">
       <div class="section-head"><div><div class="section-kicker">01 · направление</div><h2>Не «зимний марафон»,<br>а зимняя система</h2></div></div>
@@ -121,35 +137,56 @@
         <article class="idea" data-category="mind product"><div class="idea-no">01</div><div><div class="idea-title">Зимний аудит энергии</div><p class="idea-text">Помочь понять, что именно проседает: свет, сон, движение, питание, восстановление или перегрузка.</p><div class="idea-detail"><span><b>Свежесть:</b> персональный wellness вместо общего списка советов.</span><span><b>Формат:</b> HTML-тест «Что забирает энергию зимой?»</span></div></div><span class="pill p1">P1 · ядро</span></article>
         <article class="idea" data-category="mind product"><div class="idea-no">02</div><div><div class="idea-title">Свет как часть режима</div><p class="idea-text">Дневной свет, время подъёма, вечернее освещение и осторожный разговор о светотерапии.</p><div class="idea-detail"><span><b>Важно:</b> лампа — не универсальный совет и не самостоятельное лечение.</span><span><b>Формат:</b> «Световой протокол зимнего дня».</span></div></div><span class="pill p1">P1 · ядро</span></article>
         <article class="idea" data-category="product mind"><div class="idea-no">03</div><div><div class="idea-title">«Атомные привычки» для зимы</div><p class="idea-text">Якоря, микроверсии, план «если — то», снижение трения и возвращение после сбоя.</p><div class="idea-detail"><span><b>Важно:</b> не обещать сформировать привычку за 21 день.</span><span><b>Формат:</b> конструктор одной зимней опоры.</span></div></div><span class="pill p1">P1 · ядро</span></article>
-        <article class="idea" data-category="movement product"><div class="idea-no">04</div><div><div class="idea-title">Тренировка по погоде</div><p class="idea-text">Как выбрать улицу, дом, короткую версию или восстановление в зависимости от мороза, ветра, дождя и гололёда.</p><div class="idea-detail"><span><b>Свежесть:</b> курс учитывает реальную среду, а не идеальный календарь.</span><span><b>Формат:</b> дерево решений + swap-тренировки.</span></div></div><span class="pill p1">P1 · ядро</span></article>
-        <article class="idea" data-category="movement"><div class="idea-no">05</div><div><div class="idea-title">Минимально достаточная тренировка</div><p class="idea-text">У каждой тренировки есть full-, short- и recovery-версия.</p><div class="idea-detail"><span><b>Зачем:</b> сохраняет режим у людей с разным ресурсом.</span><span><b>Формат:</b> одна тема — три уровня нагрузки.</span></div></div><span class="pill p1">P1 · ядро</span></article>
-        <article class="idea" data-category="movement"><div class="idea-no">06</div><div><div class="idea-title">Баланс и устойчивость на льду</div><p class="idea-text">Стопы, голеностоп, ягодицы, корпус, координация и контроль шага.</p><div class="idea-detail"><span><b>Свежесть:</b> функциональный навык, который напрямую отвечает российской зиме.</span><span><b>Формат:</b> короткая тренировка + памятка по движению.</span></div></div><span class="pill p1">P1 · ядро</span></article>
-        <article class="idea" data-category="movement"><div class="idea-no">07</div><div><div class="idea-title">Холодный воздух и кардио</div><p class="idea-text">Кому осторожнее с нагрузкой на морозе, зачем разминка и когда разумнее выбрать помещение.</p><div class="idea-detail"><span><b>Эксперт:</b> спортивный врач или пульмонолог.</span><span><b>Формат:</b> медицинский гайд без запугивания.</span></div></div><span class="pill p2">P2 · эксперт</span></article>
+        <article class="idea" data-category="movement product"><div class="idea-no">04</div><div><div class="idea-title">Зимний сценарий активности</div><p class="idea-text">Как принимать решение по погоде, ресурсу и безопасности — без единого обязательного плана.</p><div class="idea-detail"><span><b>Свежесть:</b> курс учитывает реальную среду, а не идеальный календарь.</span><span><b>Формат:</b> дерево решений для выбора сценария дня.</span></div></div><span class="pill p1">P1 · ядро</span></article>
+        <article class="idea" data-category="movement"><div class="idea-no">05</div><div><div class="idea-title">Минимальная версия действия</div><p class="idea-text">Как сохранить контакт с выбранной привычкой, когда ресурса мало.</p><div class="idea-detail"><span><b>Зачем:</b> помогает не выпадать из режима из-за одного сложного дня.</span><span><b>Формат:</b> карточки «полная / короткая / нулевая версия».</span></div></div><span class="pill p1">P1 · ядро</span></article>
+        <article class="idea" data-category="movement"><div class="idea-no">06</div><div><div class="idea-title">Устойчивость в зимней среде</div><p class="idea-text">Обувь, поверхность, маршрут, темп и внимание к гололёду как бытовые навыки безопасности.</p><div class="idea-detail"><span><b>Свежесть:</b> функциональный контент, который напрямую отвечает российской зиме.</span><span><b>Формат:</b> памятка перед выходом.</span></div></div><span class="pill p1">P1 · ядро</span></article>
+        <article class="idea" data-category="movement"><div class="idea-no">07</div><div><div class="idea-title">Холодный воздух и нагрузка</div><p class="idea-text">Кому нужна осторожность на морозе, какие признаки не игнорировать и когда выбрать помещение.</p><div class="idea-detail"><span><b>Эксперт:</b> спортивный врач или пульмонолог.</span><span><b>Формат:</b> медицинский гайд без назначения тренировок.</span></div></div><span class="pill p2">P2 · эксперт</span></article>
         <article class="idea" data-category="food"><div class="idea-no">08</div><div><div class="idea-title">Тёплая еда, но не зимняя тяжесть</div><p class="idea-text">Белок + клетчатка + текстура + яркий вкус: супы, bowl, противни, рагу, тёплые салаты.</p><div class="idea-detail"><span><b>Свежесть:</b> аскетичная база без «курицы с гречкой».</span><span><b>Формат:</b> конструктор блюда и оригинальные рецепты.</span></div></div><span class="pill p1">P1 · ядро</span></article>
         <article class="idea" data-category="food product"><div class="idea-no">09</div><div><div class="idea-title">Зимняя кладовая</div><p class="idea-text">Корнеплоды, капуста, замороженные ягоды и овощи, бобовые, рыба, крупы и ферментированные продукты.</p><div class="idea-detail"><span><b>Свежесть:</b> не меню, а система сборки из доступных продуктов.</span><span><b>Формат:</b> HTML «Собери зимний ужин из того, что дома».</span></div></div><span class="pill p1">P1 · ядро</span></article>
         <article class="idea" data-category="food"><div class="idea-no">10</div><div><div class="idea-title">Ферментация без магии</div><p class="idea-text">Квашеная капуста, кимчи, кефир и йогурт — через вкус, хранение и разнообразие рациона, без лечебных обещаний.</p><div class="idea-detail"><span><b>Важно:</b> не обещать «перезагрузить микробиом».</span><span><b>Формат:</b> статья + карточки продуктов.</span></div></div><span class="pill p2">P2 · тренд</span></article>
         <article class="idea" data-category="food"><div class="idea-no">11</div><div><div class="idea-title">Витамин D без запугивания</div><p class="idea-text">Что дают продукты, кому нужна консультация врача и почему универсальные мегадозы — плохая идея.</p><div class="idea-detail"><span><b>Эксперт:</b> эндокринолог.</span><span><b>Формат:</b> разбор мифов и навигация к врачу.</span></div></div><span class="pill p1">P1 · эксперт</span></article>
         <article class="idea" data-category="skin"><div class="idea-no">12</div><div><div class="idea-title">Кожный барьер зимой</div><p class="idea-text">Холод, ветер, отопление, горячий душ, очищение и активные средства.</p><div class="idea-detail"><span><b>Свежесть:</b> barrier-first вместо наращивания количества банок.</span><span><b>Формат:</b> персональный HTML-гайд.</span></div></div><span class="pill p1">P1 · эксперт</span></article>
-        <article class="idea" data-category="skin movement"><div class="idea-no">13</div><div><div class="idea-title">Кожа в связке с тренировками</div><p class="idea-text">Пот, шапки, шарфы, трение, холодный воздух и уход после душа.</p><div class="idea-detail"><span><b>Свежесть:</b> не общий skincare, а зимние сценарии активного человека.</span><span><b>Формат:</b> «до / после тренировки».</span></div></div><span class="pill p2">P2 · практика</span></article>
+        <article class="idea" data-category="skin movement"><div class="idea-no">13</div><div><div class="idea-title">Кожа активного человека зимой</div><p class="idea-text">Пот, шапки, шарфы, трение, холодный воздух и уход после душа.</p><div class="idea-detail"><span><b>Свежесть:</b> не общий skincare, а зимние сценарии человека в движении.</span><span><b>Формат:</b> сценарий «до / после активности».</span></div></div><span class="pill p2">P2 · практика</span></article>
         <article class="idea" data-category="mind"><div class="idea-no">14</div><div><div class="idea-title">Свет, сон и праздничная перегрузка</div><p class="idea-text">Как не потерять ритм в декабре, когда меняются сон, питание, расписание и социальная нагрузка.</p><div class="idea-detail"><span><b>Подход:</b> практичная психогигиена, не отдельный курс терапии.</span><span><b>Формат:</b> планировщик «Мой декабрь без режима всё или ничего».</span></div></div><span class="pill p2">P2 · сезон</span></article>
         <article class="idea" data-category="product"><div class="idea-no">15</div><div><div class="idea-title">Что умеют wearable-данные</div><p class="idea-text">Как смотреть на сон, пульс, активность и тренды самонаблюдения без тревожного контроля.</p><div class="idea-detail"><span><b>Свежесть:</b> использовать главный фитнес-тренд 2026 года с критическим мышлением.</span><span><b>Формат:</b> интерактивный разбор метрик.</span></div></div><span class="pill p3">P3 · опция</span></article>
         <article class="idea" data-category="product mind"><div class="idea-no">16</div><div><div class="idea-title">Возвращение после сбоя</div><p class="idea-text">Что делать после болезни, поездки, тяжёлой недели или праздничного периода.</p><div class="idea-detail"><span><b>Зачем:</b> устойчивость важнее идеальной серии без пропусков.</span><span><b>Формат:</b> карточки «1 день / 3 дня / неделя вне режима».</span></div></div><span class="pill p1">P1 · механика</span></article>
       </div>
     </section>
     <section id="structure">
-      <div class="section-head"><div><div class="section-kicker">04 · сборка</div><h2>Как разложить<br>на три недели</h2><p class="sub">Тренировки идут каждую неделю: силовая, кардио и йога/flow. Теоретические материалы и интерактивы поддерживают общий зимний сюжет.</p></div></div>
-      <div class="timeline">
-        <div class="week"><span class="week-dot">01</span><div class="week-card"><div class="label">Неделя 1 · войти в зиму</div><h3>Энергия и режим</h3><ul><li>зимний аудит энергии;</li><li>свет, подъём и вечерний ритм;</li><li>одна личная микропривычка;</li><li>силовая + йога/mobility + короткая версия на низкий ресурс.</li></ul></div></div>
-        <div class="week"><span class="week-dot">02</span><div class="week-card"><div class="label">Неделя 2 · дать опору</div><h3>Топливо и защита</h3><ul><li>тёплая еда без тяжести;</li><li>зимняя кладовая и ферментация;</li><li>витамин D;</li><li>уход за лицом, телом, руками и губами;</li><li>силовая + кардио + йога/flow.</li></ul></div></div>
-        <div class="week"><span class="week-dot">03</span><div class="week-card"><div class="label">Неделя 3 · жить в реальной зиме</div><h3>Адаптация и устойчивость</h3><ul><li>решение «улица / дом / короткая версия»;</li><li>баланс, стопы и голеностоп;</li><li>холодный воздух и кардио;</li><li>праздничная нагрузка;</li><li>план возвращения после сбоя;</li><li>личный зимний протокол до конца сезона.</li></ul></div></div>
+      <div class="section-head"><div><div class="section-kicker">04 · контентная сборка</div><h2>Три недели<br>в одной сетке</h2><p class="sub">Здесь пока только наполнение курса: короткие материалы, интерактивы и конкретные микропривычки. Тренировочные назначения в сетку не включаем.</p></div></div>
+      <div class="plan-stack">
+        <div class="plan-block">
+          <div class="plan-block-head"><h3>Неделя 1 · собрать зимнюю опору</h3><span>энергия · свет · режим</span></div>
+          <div class="plan-scroll"><table class="plan-table"><thead><tr><th>Контентная линия</th><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr></thead><tbody>
+            <tr><th>Тема дня</th><td><b>Аудит энергии</b>Что именно проседает зимой: свет, сон, движение, еда или перегрузка.</td><td><b>Световой протокол</b>Дневной свет, время подъёма и выход из «вечной темноты».</td><td><b>Микропривычка</b>Как выбрать один якорь и не пытаться поменять всю жизнь.</td><td><b>Вечерний ритм</b>Что делать с ярким светом, экраном и длинным зимним вечером.</td><td><b>День низкого ресурса</b>Минимальная версия плана без режима «всё или ничего».</td><td><b>Проверка опоры</b>Что сработало, что мешало и где снизить трение.</td><td><b>Сборка недели</b>Выбрать одну опору, которую оставляем на следующую неделю.</td></tr>
+            <tr><th>Формат</th><td>HTML-тест</td><td>Короткий гайд</td><td>Конструктор</td><td>Чек-лист</td><td>Карточки «если — то»</td><td>Мини-рефлексия</td><td>Шаблон личного правила</td></tr>
+            <tr><th>Микропривычка</th><td class="habit">Отметить один главный источник зимней просадки.</td><td class="habit">10 минут дневного света в первой половине дня.</td><td class="habit">Привязать действие к якорю: «после кофе — открыть шторы и выйти к окну».</td><td class="habit">За час до сна приглушить один яркий источник света.</td><td class="habit">Сделать двухминутную версию запланированного действия.</td><td class="habit">Убрать одно лишнее препятствие на завтра.</td><td class="habit">Записать личное правило: «Когда X, я делаю Y».</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="plan-block">
+          <div class="plan-block-head"><h3>Неделя 2 · дать телу опору</h3><span>тёплая еда · кожа · доказательность</span></div>
+          <div class="plan-scroll"><table class="plan-table"><thead><tr><th>Контентная линия</th><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr></thead><tbody>
+            <tr><th>Тема дня</th><td><b>Тёплая еда без тяжести</b>Формула: белок + клетчатка + соус/текстура.</td><td><b>Зимняя кладовая</b>Как собрать несколько блюд из доступной базы.</td><td><b>Ферментация без магии</b>Вкус, хранение и разнообразие — без обещаний «лечить микробиом».</td><td><b>Витамин D</b>Что можно обсуждать в курсе, а где нужна консультация врача.</td><td><b>Кожный барьер</b>Холод, ветер, отопление, очищение и агрессивные активы.</td><td><b>Кожа после душа и движения</b>Пот, трение, руки, губы и тело в зимнем сценарии.</td><td><b>Личная зимняя база</b>Собрать список из трёх блюд и трёх средств ухода.</td></tr>
+            <tr><th>Формат</th><td>Конструктор тарелки</td><td>HTML-справочник</td><td>Карточки продуктов</td><td>Разбор мифов</td><td>Гайд с дерматологом</td><td>Сценарий «до / после»</td><td>Чек-лист базы</td></tr>
+            <tr><th>Микропривычка</th><td class="habit">Добавить белковый компонент и источник клетчатки в один приём пищи.</td><td class="habit">Держать дома три базовых продукта для быстрой тёплой еды.</td><td class="habit">Добавить привычный ферментированный продукт к одному приёму пищи, если он подходит.</td><td class="habit">Не начинать добавки «на всякий случай»: сначала проверить показания.</td><td class="habit">Наносить крем на руки после одного регулярного мытья.</td><td class="habit">После душа наносить средство на слегка влажную кожу.</td><td class="habit">Сохранить в заметках свой короткий список «есть дома / купить».</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="plan-block">
+          <div class="plan-block-head"><h3>Неделя 3 · жить в реальной зиме</h3><span>погода · праздники · возвращение</span></div>
+          <div class="plan-scroll"><table class="plan-table"><thead><tr><th>Контентная линия</th><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr></thead><tbody>
+            <tr><th>Тема дня</th><td><b>Решение по погоде</b>Как выбирать сценарий дня по холоду, осадкам, ветру и гололёду.</td><td><b>Холодный воздух</b>Кому нужна осторожность и когда выбрать помещение.</td><td><b>Устойчивость на льду</b>Безопасная обувь, маршрут, темп и внимание к поверхности.</td><td><b>Праздничная перегрузка</b>Сон, встречи, еда и обязательства без «идеального декабря».</td><td><b>Возвращение после сбоя</b>Что делать после одного дня, трёх дней или недели вне режима.</td><td><b>Личный зимний протокол</b>Собрать рабочую версию «если — то» для своей реальности.</td><td><b>Финальная сборка</b>Оставить три правила, которые будут работать до конца сезона.</td></tr>
+            <tr><th>Формат</th><td>Дерево решений</td><td>Медицинский гайд</td><td>Памятка</td><td>Планировщик</td><td>Карточки возврата</td><td>Конструктор протокола</td><td>Итоговый PDF/HTML</td></tr>
+            <tr><th>Микропривычка</th><td class="habit">Перед выходом проверить погоду, поверхность и запасной сценарий.</td><td class="habit">Перед активностью на улице сделать короткую проверку самочувствия и дыхания.</td><td class="habit">На скользком участке замедлиться и убрать телефон из руки.</td><td class="habit">Заранее выбрать одну несгораемую опору дня: сон, еда или короткий выход на свет.</td><td class="habit">После сбоя начать с самого маленького следующего шага, не «компенсировать» пропуск.</td><td class="habit">Записать два личных плана: «если есть силы» и «если сил мало».</td><td class="habit">Выбрать три правила и поставить их в заметки/напоминания.</td></tr>
+          </tbody></table></div>
+        </div>
       </div>
     </section>
     <section id="levels">
       <div class="section-head"><div><div class="section-kicker">05 · доступность</div><h2>Один курс —<br>три уровня входа</h2></div></div>
       <div class="grid-3">
-        <div class="card"><h3>Минимум</h3><p>10–15 минут, базовое действие, короткая тренировка, простая еда и одна опора на день.</p></div>
-        <div class="card"><h3>База</h3><p>Полная тренировка, полноценный материал, план питания и привычка в обычном режиме.</p></div>
-        <div class="card"><h3>Прогрессия</h3><p>Усложнение нагрузки, дополнительные кардио- или силовые задачи, работа с метриками и более глубокий трек.</p></div>
+        <div class="card"><h3>Минимум</h3><p>Один короткий материал, одна микропривычка и действие, которое можно выполнить даже в загруженный день.</p></div>
+        <div class="card"><h3>База</h3><p>Материал дня, интерактив или чек-лист и полноценная версия личного зимнего правила.</p></div>
+        <div class="card"><h3>Прогрессия</h3><p>Дополнительный разбор, самостоятельная настройка сценариев и сборка личного протокола на сезон.</p></div>
       </div>
     </section>
     <section id="avoid">
@@ -173,7 +210,7 @@
         <div class="source"><a href="https://doi.org/10.3390/bs15111448" target="_blank" rel="noopener">Behaviour change techniques 2025</a><br>Целеполагание, самонаблюдение, обратная связь и подсказки.</div>
       </div>
     </section>
-    <footer>Рабочая версия продуктового исследования · Зимняя сезонка #SEKTA · Обновлено 17.09.2026</footer>
+    <footer>Рабочая версия продуктового исследования · Зимняя сезонка #SEKTA · Обновлено 18.09.2026</footer>
   </main>
   <script>
     const buttons = [...document.querySelectorAll('.filter')];
